@@ -41,15 +41,12 @@ class RoundAboutConductor extends Actor with ActorLogging {
   def executeStep: Runnable = new Runnable {
     def run() = {
       for (q <- queues) {
-
           try {
             trafficDestination ! q.dequeue()
           }
           catch {
             case e : Exception => {}
           }
-
-
       }
     }
   }
