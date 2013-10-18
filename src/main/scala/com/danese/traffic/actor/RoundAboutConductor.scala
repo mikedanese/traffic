@@ -35,7 +35,6 @@ class RoundAboutConductor extends Actor with ActorLogging {
         case _ : East => queues(2).enqueue(car)
         case _ : West => queues(3).enqueue(car)
       }
-//      queues(4).enqueue(car)
     }
   }
 
